@@ -100,4 +100,6 @@ C:\Aplicada2\PrestamoBlazor\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Perso
 C:\Aplicada2\PrestamoBlazor\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\PrestamoPage.razor.g.cs
 C:\Aplicada2\PrestamoBlazor\obj\Debug\netcoreapp3.1\Razor\Pages\PersonaPage.razor.g.cs
 C:\Aplicada2\PrestamoBlazor\obj\Debug\netcoreapp3.1\Razor\Pages\PrestamoPage.razor.g.cs
+C:\Aplicada2\PrestamoBlazor\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\MoraPage.razor.g.cs
+C:\Aplicada2\PrestamoBlazor\obj\Debug\netcoreapp3.1\Razor\Pages\MoraPage.razor.g.cs
 C:\Aplicada2\PrestamoBlazor\bin\Debug\netcoreapp3.1\Data\PrestamoDB.db

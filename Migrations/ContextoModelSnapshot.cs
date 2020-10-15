@@ -16,6 +16,45 @@ namespace PrestamoBlazor.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.8");
 
+            modelBuilder.Entity("PrestamoBlazor.Models.MoraDetalles", b =>
+                {
+                    b.Property<int>("MoraDetalleId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("MoraId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PrestamoId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("Valor")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("MoraDetalleId");
+
+                    b.HasIndex("MoraId");
+
+                    b.ToTable("MoraDetalles");
+                });
+
+            modelBuilder.Entity("PrestamoBlazor.Models.Moras", b =>
+                {
+                    b.Property<int>("MoraId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("Total")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("MoraId");
+
+                    b.ToTable("Moras");
+                });
+
             modelBuilder.Entity("PrestamoBlazor.Models.Personas", b =>
                 {
                     b.Property<int>("PersonaId")
@@ -77,6 +116,15 @@ namespace PrestamoBlazor.Migrations
                     b.HasKey("PrestamoId");
 
                     b.ToTable("Prestamos");
+                });
+
+            modelBuilder.Entity("PrestamoBlazor.Models.MoraDetalles", b =>
+                {
+                    b.HasOne("PrestamoBlazor.Models.Moras", null)
+                        .WithMany("MoraDetalles")
+                        .HasForeignKey("MoraId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
