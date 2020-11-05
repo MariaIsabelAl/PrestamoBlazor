@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PrestamoBlazor.DAL;
 using PrestamoBlazor.Models;
@@ -19,6 +20,11 @@ namespace PrestamoBlazor.BLL
             else
                 return Modificar(personas);
 
+        }
+
+        public static ActionResult<List<Personas>> GetPersona()
+        {
+            throw new NotImplementedException();
         }
 
         private static bool Insertar(Personas personas)
